@@ -7,4 +7,12 @@ app.post("/submit-form", (req, res) => {
   res.json({ status: "Form saved" });
 });
 
-app.listen(process.env.PORT);
+app.get("/", (req, res) => {
+  res.send("Form & Workflow API running");
+});
+
+const PORT = process.env.PORT || 3000;
+app.listen(PORT, () => {
+  console.log(`Server running on port ${PORT}`);
+});
+``
